@@ -815,6 +815,42 @@
   .gem-item:last-child { margin-bottom: 0; }
   .gem-item-name { font-weight: 500; font-size: 14px; color: var(--text); }
   .gem-item-desc { font-size: 13px; color: var(--muted); line-height: 1.65; margin-top: 2px; }
+
+  /* PHOTOS HÉBERGEMENTS */
+  .accom-img {
+    width: calc(100% + 40px);
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius) var(--radius) 0 0;
+    margin: -20px -20px 14px -20px;
+    display: block;
+  }
+
+  /* PHOTOS FOODIE & GEMS */
+  .foodie-item-img, .gem-item-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* PHOTO INLINE RESTO */
+  .resto-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin: 10px 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 600px) {
+    .accom-img { height: 120px; }
+    .foodie-item-img, .gem-item-img { height: 120px; }
+    .resto-img { height: 110px; }
+  }
 </style>
 </head>
 <body>
@@ -1012,6 +1048,7 @@
       <span class="info-label">Où dormir — par budget</span>
       <div class="accom-grid">
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1612365228448-4ad44e105dc5?w=600&q=80" alt="Chambre d'hôtel avec fenêtre lumineuse" loading="lazy">
           <span class="accom-tier budget">Budget</span>
           <div class="accom-name">Halepa Hotel</div>
           <div class="accom-price">~50–65 €/nuit</div>
@@ -1022,6 +1059,7 @@
           </div>
         </div>
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1694434029818-0f0dd57939b1?w=600&q=80" alt="Balcon avec vue sur cour vénitienne" loading="lazy">
           <span class="accom-tier mid">Mid-range</span>
           <div class="accom-name">Ionas Boutique Hotel</div>
           <div class="accom-price">~80–115 €/nuit</div>
@@ -1033,6 +1071,7 @@
           </div>
         </div>
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1603504027221-7c97b2f2d09d?w=600&q=80" alt="Intérieur vénitien restauré aux murs blancs" loading="lazy">
           <span class="accom-tier gem">Pépite</span>
           <div class="accom-name">Harismari Cozy Hotel</div>
           <div class="accom-price">~95–130 €/nuit</div>
@@ -1055,17 +1094,20 @@
                 <a href="https://www.tamamrestaurant.com/" target="_blank" class="link-pill">Site officiel</a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189415-d1104362-Reviews-Tamam_Restaurant-Chania_Town_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
                 <a href="https://www.google.com/maps/search/Tamam+Restaurant+Zampeliou+Chania" target="_blank" class="link-pill">Maps</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1580751150184-e12c5beb8588?w=600&q=80" alt="Table garnie de plats crétois — mezze et légumes" loading="lazy"><br>
               <strong>Chrisostomos</strong> — 13 fois primé. Four à bois, agneau ofto, pain maison. Ouvert mer–dim seulement.
               <div class="link-row">
                 <a href="https://chrisostomos.gr/en/" target="_blank" class="link-pill">Site officiel</a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189415-d1645781-Reviews-Chrisostomos-Chania_Town_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1692106914421-e04e1066bd62?w=600&q=80" alt="Agneau rôti sur planche en bois — spécialité au four" loading="lazy"><br>
               <strong>Thalassino Ageri</strong> — Tabakaria (anciennes tanneries), à 2 km du centre. La meilleure table de fruits de mer — les vagues touchent presque les tables. Poisson du jour, oursin, homard. <strong>Réserver longtemps d'avance.</strong>
               <div class="link-row">
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189415-d1204331-Reviews-Thalassino_Ageri-Chania_Town_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
                 <a href="https://www.google.com/maps/search/Thalassino+Ageri+Tabakaria+Chania" target="_blank" class="link-pill">Maps</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1764397514672-63b1a7a79110?w=600&q=80" alt="Poulpe grillé aux herbes fraîches — fruits de mer" loading="lazy"><br>
               <strong>Evgonia</strong> — Taverna de quartier, Milonogianni 120. Menu selon l'arrivage. Agneau, lapin, poisson frais, yogourt maison. Le proprio Nektarios guide les choix.
               <div class="link-row">
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189415-d6206686-Reviews-Evgonia-Chania_Town_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
@@ -1122,22 +1164,27 @@
         <div class="foodie-item">
           <div class="foodie-item-name">Loukoumades chez Ntourountous</div>
           <div class="foodie-item-desc">Beignets au miel chauds, recette familiale. Place 1866, au cœur de la ville. Travelers' Choice TripAdvisor. <a href="https://www.google.com/maps/search/Ntourountous+bakery+Chania" target="_blank" class="ext-link">Localiser</a></div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600&q=80" alt="Loukoumades dorés arrosés de miel" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Sfakianopita au marché</div>
           <div class="foodie-item-desc">Crêpe fine fourrée à la myzithra, arrosée de miel de thym. La vraie version Sfakiote — on va en manger encore plus à Loutro.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1748274240982-6b99b423ee93?w=600&q=80" alt="Fromage et olives — mezze crétois" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Pieuvre grillée (xtapodi sti schara)</div>
           <div class="foodie-item-desc">Commander au Thalassino Ageri. Grillée à la perfection, huile d'olive crétoise, citron. Aussi essayer l'oursin en salade.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1764397514715-37a966071228?w=600&q=80" alt="Poulpe grillé aux herbes et feta" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Dégustation raki et vin</div>
           <div class="foodie-item-desc">Tour privé des vignobles avec <a href="https://www.chaniawinetours.com/" target="_blank" class="ext-link">Chania Wine Tours</a> — visites chez Manousakis ou Karavitakis. Le tsikoudia (raki crétois) est offert comme digestif partout.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1667226701528-722a4f098707?w=600&q=80" alt="Vin et panier dans les vignes" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Cours de cuisine crétoise</div>
           <div class="foodie-item-desc"><a href="https://www.chaniagastronomy.com/" target="_blank" class="ext-link">Chania Gastronomy</a> — petits groupes (max 10), approche slow travel. Apprendre le dakos, les dolmadakia, les kalitsounia.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1638612833646-34eecc16f3f1?w=600&q=80" alt="Préparation de plats crétois traditionnels" loading="lazy">
         </div>
       </div>
 
@@ -1147,18 +1194,22 @@
         <div class="gem-item">
           <div class="gem-item-name">Quartier Splantzia (le vrai)</div>
           <div class="gem-item-desc">Pas le front de port — les ruelles derrière. Bougainvilliers, ateliers de couteliers traditionnels (rue Maxaradika), cafés cachés dans des cours intérieures. Les vieilles dames assises sur le pas de leur porte. <a href="https://www.google.com/maps/search/Splantzia+Square+Chania+Crete" target="_blank" class="ext-link">Localiser</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1634372307576-18e2a25e825b?w=600&q=80" alt="Ruelle pavée bordée de fruits et fleurs — quartier traditionnel" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Colline du Prophète Élie (Profiti Ilia)</div>
           <div class="gem-item-desc">Le spot sunset des locaux. Vue panoramique sur Chania, la baie de Souda et la mer Égée. Mieux que le phare pour les photos. <a href="https://www.google.com/maps/search/Prophet+Elijah+Hill+Chania+Crete" target="_blank" class="ext-link">Localiser</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1766393305879-96093c91c0ca?w=600&q=80" alt="Table dressée au coucher du soleil face à la mer" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Plage de Nea Chora</div>
           <div class="gem-item-desc">À 10 min à pied du centre. Sable fin, eau cristalline, pas de touristes. Sections pour le snorkeling. La plage locale par excellence. <a href="https://www.google.com/maps/search/Nea+Chora+Beach+Chania" target="_blank" class="ext-link">Localiser</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1589052958432-21951b2f0982?w=600&q=80" alt="Montagnes et mer turquoise — crique crétoise" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Port vénitien à 5h30 du matin</div>
           <div class="gem-item-desc">Le phare égyptien, les façades colorées, les bateaux de pêche — sans un seul touriste. La meilleure photo de Chania se prend à l'aube.</div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1772331161410-7a4e7ce1a2aa?w=600&q=80" alt="Dîner illuminé en bord de mer le soir" loading="lazy">
         </div>
       </div>
     </div>
@@ -1207,6 +1258,7 @@
       <span class="info-label">Où dormir — par budget</span>
       <div class="accom-grid">
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1719821756477-dcb0b6ed0dc9?w=600&q=80" alt="Terrasse avec parasol et vue mer" loading="lazy">
           <span class="accom-tier budget">Budget</span>
           <div class="accom-name">Hotel Anna</div>
           <div class="accom-price">~35–50 €/nuit</div>
@@ -1217,6 +1269,7 @@
           </div>
         </div>
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1693098243367-93320637839e?w=600&q=80" alt="Balcon avec table donnant sur la mer" loading="lazy">
           <span class="accom-tier mid">Mid-range</span>
           <div class="accom-name">Porto Loutro</div>
           <div class="accom-price">~82–100 €/nuit</div>
@@ -1227,6 +1280,7 @@
           </div>
         </div>
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1758561087076-e647b2e2485a?w=600&q=80" alt="Restaurant avec vue sur l'océan" loading="lazy">
           <span class="accom-tier gem">Pépite</span>
           <div class="accom-name">Notos Restaurant & Rooms</div>
           <div class="accom-price">~60–85 €/nuit</div>
@@ -1247,12 +1301,14 @@
               <div class="link-row">
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g1187644-d3566876-Reviews-Stratis-Loutro_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
                 <a href="https://www.google.com/maps/search/Stratis+Taverna+Loutro+Crete" target="_blank" class="link-pill">Maps</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1676471977139-315014bed47e?w=600&q=80" alt="Côtelettes d'agneau grillées sur assiette" loading="lazy"><br>
               <strong>Ilios</strong> — Famille depuis 1979. Fruits de mer frais, vue sur la baie.
               <div class="link-row">
                 <a href="https://iliosloutro.gr/en/" target="_blank" class="link-pill">Site officiel</a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g1187644-d3518985-Reviews-Ilios_Hotel_Restaurant-Loutro_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1768322264423-4b0adf0cf31b?w=600&q=80" alt="Poisson grillé et pieuvre avec légumes" loading="lazy"><br>
               <strong>Blue House</strong> — Menu varié, #1 du village sur TripAdvisor. Front de mer.
               <div class="link-row">
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g1187644-d3478256-Reviews-Blue_House_Restaurant-Loutro_Chania_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
@@ -1305,18 +1361,22 @@
         <div class="foodie-item">
           <div class="foodie-item-name">Sfakianopita — LE plat de la région</div>
           <div class="foodie-item-desc">Crêpe fine pétrie au raki, fourrée à la myzithra fraîche, dorée à la poêle, arrosée de miel de thym et graines de sésame. Commander partout — c'est le terroir local. En lice pour l'UNESCO.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1767514579388-278d63566fd7?w=600&q=80" alt="Plat gratiné aux herbes — cuisine crétoise" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Paidakia chez Stratis</div>
           <div class="foodie-item-desc">Côtelettes d'agneau grillées, yogourt du troupeau familial. Simple, parfait. Accompagner de salade crétoise et de vin de la maison.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1553621044-bcfa686676dc?w=600&q=80" alt="Viande grillée à côté de haricots verts" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Déjeuner à la taverna Dialiskari (Marmara Beach)</div>
           <div class="foodie-item-desc">Accessible uniquement par bateau. Pain pétri main, légumes du jardin, poisson grillé. Manger pieds dans le sable avec vue sur les grottes de marbre.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1759369983522-b12cd771fe01?w=600&q=80" alt="Table dressée dans un café en bord de mer" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Raki maison (tsikoudia)</div>
           <div class="foodie-item-desc">Offert comme digestif après chaque repas. Distillé en novembre dans les villages — un rituel communautaire crétois. Demander la version au miel (rakomelo) pour finir la soirée.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1573126617899-41f1dffb196c?w=600&q=80" alt="Verre de raki sur table de taverna" loading="lazy">
         </div>
       </div>
 
@@ -1326,14 +1386,17 @@
         <div class="gem-item">
           <div class="gem-item-name">Sentier E4 vers Glyka Nera au lever du soleil</div>
           <div class="gem-item-desc">Partir à 6h30, longer la côte, arriver seul sur la plage aux sources d'eau douce. Se baigner dans une eau où personne n'est encore allé ce jour-là. <a href="https://www.alltrails.com/trail/greece/crete/glyka-nera-beach-timios-stavros-chapel-loutro" target="_blank" class="ext-link">Voir le sentier</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1627240821221-10c90724a9e1?w=600&q=80" alt="Rivage rocheux avec herbe verte et mer turquoise" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Old Phoenix, baie de Finix</div>
           <div class="gem-item-desc">Site archéologique de l'ancien port d'Anopolis. Taverna isolée dans une baie sauvage, accès par sentier ou bateau. Déjeuner face à la Libye avec personne d'autre. <a href="https://www.old-phoenix.com/" target="_blank" class="ext-link">old-phoenix.com</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1575237579976-4d4219f1860f?w=600&q=80" alt="Eau cristalline dans une crique isolée" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">La promenade du soir, 19h–20h</div>
           <div class="gem-item-desc">Quand le dernier ferry est parti. Les chats sortent, les lumières s'allument sur la baie, les propriétaires des tavernas s'assoient avec un raki. Le vrai Loutro ne commence qu'à cette heure-là.</div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1664547654523-24e8a9121988?w=600&q=80" alt="Terrasse de café avec vue sur l'océan au crépuscule" loading="lazy">
         </div>
       </div>
 
@@ -1374,6 +1437,7 @@
       <span class="info-label">Où dormir — par budget</span>
       <div class="accom-grid">
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1630410304931-d90e1fe3f918?w=600&q=80" alt="Murs blancs et plantes vertes — studio méditerranéen" loading="lazy">
           <span class="accom-tier budget">Budget</span>
           <div class="accom-name">Nereids Apartments</div>
           <div class="accom-price">~45–58 €/nuit</div>
@@ -1384,6 +1448,7 @@
           </div>
         </div>
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1604145195376-e2c8195adf29?w=600&q=80" alt="Terrasse et mobilier extérieur face à la mer" loading="lazy">
           <span class="accom-tier mid">Mid-range</span>
           <div class="accom-name">Elysee Hotel</div>
           <div class="accom-price">~65–85 €/nuit</div>
@@ -1394,6 +1459,7 @@
           </div>
         </div>
         <div class="accom-card">
+          <img class="accom-img" src="https://images.unsplash.com/photo-1606141331552-a39fb3230fc3?w=600&q=80" alt="Table en bois et chaises — ambiance rustique méditerranéenne" loading="lazy">
           <span class="accom-tier gem">Pépite</span>
           <div class="accom-name">Livikoview — Xerokambos</div>
           <div class="accom-price">~75–95 €/nuit</div>
@@ -1414,12 +1480,14 @@
               <div class="link-row">
                 <a href="https://zorbas-seaside-restaurant.com/" target="_blank" class="link-pill">Site officiel</a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g2543839-d3386981-Reviews-Zorba_s_Tavern-Sitia_Lasithi_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1764397514707-48308ede7f04?w=600&q=80" alt="Poulpe grillé avec légumes et vin rosé" loading="lazy"><br>
               <strong>Inodion</strong> — Famille Garefalakis depuis 2005. Dakos au four à bois, huile PDO de Sitia. Ruelle derrière le port.
               <div class="link-row">
                 <a href="https://www.inodion.gr/en" target="_blank" class="link-pill">Site officiel</a>
                 <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g2543839-d5598188-Reviews-Inodion-Sitia_Lasithi_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1640702296640-20dfeee862ad?w=600&q=80" alt="Tomates et légumes tranchés — ingrédients frais crétois" loading="lazy"><br>
               <strong>Tzivaeri</strong> — Coin du port, famille Psarakis. Plateau de poisson pour deux à 22 €, pain maison, huile et vin bio. Note 4.5/5.
               <div class="link-row">
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g2543839-d12637480-Reviews-Tzivaeri-Sitia_Lasithi_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
@@ -1478,18 +1546,22 @@
         <div class="foodie-item">
           <div class="foodie-item-name">Huile d'olive PDO de Sitia</div>
           <div class="foodie-item-desc">Appellation protégée, variété Koroneiki unique. Dégustation gratuite à l'<a href="https://www.google.com/maps/search/Ecomuseum+Municipality+Sitia+Crete" target="_blank" class="ext-link">Écomusée de Sitia</a>. Acheter directement aux producteurs — incomparable avec ce qu'on trouve en supermarché.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1474979266404-7f28db8e8d59?w=600&q=80" alt="Huile d'olive versée — close-up doré" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Vin Liatiko au Monastère de Toplou</div>
           <div class="foodie-item-desc">Cépage rouge autochtone, sec et charpenté. Dégustation sur place au <a href="https://toplouoliveoil.com/" target="_blank" class="ext-link">monastère</a>. 5 siècles de viticulture, vin bio certifié. Ramener quelques bouteilles.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1667226701528-722a4f098707?w=600&q=80" alt="Vin et panier dans les vignes" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Plateau de poisson chez Tzivaeri</div>
           <div class="foodie-item-desc">22 € pour deux. Poisson du matin, pain du four, huile et vin de la famille Psarakis. Le genre de repas qu'on ne trouve plus nulle part en zone touristique.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1764397514789-079231e88f31?w=600&q=80" alt="Assiette de poisson et poulpe grillés avec légumes" loading="lazy">
         </div>
         <div class="foodie-item">
           <div class="foodie-item-name">Pieuvre séchée au soleil</div>
           <div class="foodie-item-desc">Tradition en déclin mais encore visible sur le port de Sitia. Demander la xtapodi krasata (pieuvre au vin rouge) chez Fegaropsaro — la version cuttlefish aussi.</div>
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1764397514746-e58523d0eaff?w=600&q=80" alt="Poulpe grillé avec salade et vin sur la table" loading="lazy">
         </div>
       </div>
 
@@ -1499,18 +1571,22 @@
         <div class="gem-item">
           <div class="gem-item-name">Argilos Beach, Xerokambos — spa naturel</div>
           <div class="gem-item-desc">Plage d'argile pliocène. Les baigneurs se couvrent d'argile naturelle — un spa en plein air gratuit. Surréaliste. <a href="https://www.google.com/maps/search/Argilos+Beach+Xerokambos+Crete" target="_blank" class="ext-link">Localiser</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1577986396799-e4739339575d?w=600&q=80" alt="Eaux turquoise et côte rocheuse" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Psili Ammos — la plage cachée derrière Vaï</div>
           <div class="gem-item-desc">Sentier par-dessus le promontoire depuis le parking de Vaï. Plage déserte sans aucune installation. Apporter eau et nourriture. Le contraste avec Vaï est saisissant.</div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1572006169383-3588cb15361f?w=600&q=80" alt="Palmiers au bord d'un plan d'eau cristalline" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Gorge de Zakros (Gorge des Morts)</div>
           <div class="gem-item-desc">Formations rocheuses spectaculaires, tombes minoennes dans les grottes. Débouche directement sur la plage et le palais minoen. Le combo archéologie-baignade parfait. <a href="https://www.google.com/maps/search/Zakros+Gorge+Dead+Crete" target="_blank" class="ext-link">Localiser</a></div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1577974015001-fb2bed12a42c6?w=600&q=80" alt="Rivière à travers une gorge verdoyante" loading="lazy">
         </div>
         <div class="gem-item">
           <div class="gem-item-name">Palekastro — le village d'à côté</div>
           <div class="gem-item-desc">1 300 habitants, aucun tourisme de masse. Musée folklorique passionné, accès aux sites archéologiques, porte d'entrée vers Vaï sans les bus. Authenticité totale.</div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1519310948589-40d899de4d50?w=600&q=80" alt="Tables et chaises en bois devant un bâtiment en pierre" loading="lazy">
         </div>
       </div>
 
@@ -1552,6 +1628,7 @@
         <div class="info-body">
           <div class="accom-grid">
             <div class="info-block" style="margin:0">
+              <img class="accom-img" src="https://images.unsplash.com/photo-1661091106717-05b9403bbeaa?w=600&q=80" alt="Bâtiment blanc méditerranéen" loading="lazy" style="width:calc(100% + 32px);margin:-16px -16px 12px -16px">
               <span class="accom-tier budget">$ Budget</span>
               <strong>Atelier Vieux Port</strong><br>
               Studio dans la vieille ville, à deux pas du port vénitien. Déco minimaliste, cuisine équipée, terrasse sur les toits. ~55–70 €/nuit.<br>
@@ -1561,6 +1638,7 @@
               </div>
             </div>
             <div class="info-block" style="margin:0">
+              <img class="accom-img" src="https://images.unsplash.com/photo-1578864426752-f1b2900fb1f3?w=600&q=80" alt="Piscine bleue et blanche — hôtel boutique" loading="lazy" style="width:calc(100% + 32px);margin:-16px -16px 12px -16px">
               <span class="accom-tier mid">$$ Milieu de gamme</span>
               <strong>Pepi Boutique Hotel</strong><br>
               Hôtel de caractère dans un bâtiment vénitien restauré. Piscine intérieure, petit-déj crétois copieux. ~85–103 €/nuit.<br>
@@ -1570,6 +1648,7 @@
               </div>
             </div>
             <div class="info-block" style="margin:0">
+              <img class="accom-img" src="https://images.unsplash.com/photo-1695552866433-994a7750d4f8?w=600&q=80" alt="Vue à travers une arche en pierre — manoir vénitien" loading="lazy" style="width:calc(100% + 32px);margin:-16px -16px 12px -16px">
               <span class="accom-tier gem">✦ Pépite</span>
               <strong>Rimondi Boutique Hotel</strong><br>
               Ancien manoir vénitien converti, suites avec pierres apparentes, piscine dans la cour intérieure. L'adresse la plus élégante de la vieille ville. ~110–180 €/nuit.<br>
@@ -1594,23 +1673,26 @@
                 <a href="https://www.avli.gr/" target="_blank" class="link-pill">avli.gr</a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189539-d1059066-Reviews-Avli-Rethymnon_Rethymnon_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor 4.5</a>
                 <a href="https://maps.google.com/maps?q=Avli+restaurant+Rethymno" target="_blank" class="link-pill">Google Maps</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1581347964096-25fad8a08dab?w=600&q=80" alt="Agneau braisé et spécialités crétoises" loading="lazy"><br>
               <strong>Prima Plora</strong> — En terrasse face à la mer, sous la Fortezza. Cuisine crétoise créative, poisson ultra-frais, ambiance décontractée. Coucher de soleil spectaculaire.
               <div style="margin-top:6px">
                 <a href="https://www.primaplora.gr/" target="_blank" class="link-pill">primaplora.gr</a>
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189539-d2165948-Reviews-Prima_Plora-Rethymnon_Rethymnon_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor 4.6</a>
                 <a href="https://maps.google.com/maps?q=Prima+Plora+Rethymno" target="_blank" class="link-pill">Google Maps</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1766547325390-44833aa5675b?w=600&q=80" alt="Terrasse en bord de mer au coucher du soleil" loading="lazy"><br>
               <strong>Zefyros Fish Taverna</strong> — Directement sur le vieux port. Poisson grillé, poulpe au vinaigre, mezze de la mer. Portions généreuses, prix honnêtes.
               <div style="margin-top:6px">
                 <a href="https://www.tripadvisor.com/Restaurant_Review-g189539-d3578553-Reviews-Zefyros_Fish_Tavern-Rethymnon_Rethymnon_Prefecture_Crete.html" target="_blank" class="link-pill trip">TripAdvisor</a>
                 <a href="https://maps.google.com/maps?q=Zefyros+Fish+Taverna+Rethymno" target="_blank" class="link-pill">Google Maps</a>
-              </div><br>
+              </div>
+              <img class="resto-img" src="https://images.unsplash.com/photo-1760888938853-f3f92bd210b8?w=600&q=80" alt="Poisson grillé au port vénitien" loading="lazy"><br>
               <strong>Taverna Alekos</strong> (village d'Armenoi, 15 min) — Taverna de campagne dans les collines. Chèvre rôtie, produits de la ferme, vin en carafe. L'authenticité absolue hors des circuits.
               <div style="margin-top:6px">
                 <a href="https://maps.google.com/maps?q=Taverna+Alekos+Armenoi+Rethymno" target="_blank" class="link-pill">Google Maps</a>
               </div>
-              <img class="food-img" src="https://images.unsplash.com/photo-1655703568910-f095ce58dc56?w=600&q=80" alt="Table garnie de spécialités crétoises" loading="lazy">
+              <img class="resto-img" src="https://images.unsplash.com/photo-1734987052573-0fbe611842ae?w=600&q=80" alt="Chèvre rôtie à la taverna de campagne" loading="lazy">
             </div>
           </div>
         </div>
@@ -1667,11 +1749,16 @@
       <div class="foodie-block">
         <span class="info-label" style="color:#8B5516">🍷 Incontournables foodie — Rethymno</span>
         <div class="info-body" style="margin-top:12px">
-          <strong>Marché du mercredi</strong> — Rue Koumoundourou, marché paysan hebdomadaire. Fromages frais, miel de thym, herbes séchées, fruits de saison. Y aller tôt le matin pour la meilleure sélection.<br><br>
-          <strong>Kalitsounia</strong> — Chaussons crétois fourrés au fromage mizithra et herbes sauvages, version sucrée au miel. Essayer chez <strong>Ntourountous</strong> ou <strong>Hatziparshos</strong>, deux boulangeries traditionnelles de la vieille ville.<br><br>
-          <strong>Vin crétois</strong> — La région de Rethymno produit d'excellents crus. <strong>Sella Vineria</strong> et <strong>Rewine</strong> dans la vieille ville offrent des dégustations de cépages autochtones — Vidiano, Kotsifali, Mandilari.<br><br>
-          <strong>Cooking class</strong> — <strong>Androniki's Cretan House</strong> propose des cours de cuisine crétoise traditionnelle dans un village des collines. Marché le matin, cuisine l'après-midi, festin le soir. Réserver à l'avance.<br><br>
+          <strong>Marché du mercredi</strong> — Rue Koumoundourou, marché paysan hebdomadaire. Fromages frais, miel de thym, herbes séchées, fruits de saison. Y aller tôt le matin pour la meilleure sélection.
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1775343963054-11247c9d4d30?w=600&q=80" alt="Artichauts frais et poivrons colorés au marché" loading="lazy"><br>
+          <strong>Kalitsounia</strong> — Chaussons crétois fourrés au fromage mizithra et herbes sauvages, version sucrée au miel. Essayer chez <strong>Ntourountous</strong> ou <strong>Hatziparshos</strong>, deux boulangeries traditionnelles de la vieille ville.
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1733252211052-91a95b0291f8?w=600&q=80" alt="Pâtisserie dorée au miel — kalitsounia crétois" loading="lazy"><br>
+          <strong>Vin crétois</strong> — La région de Rethymno produit d'excellents crus. <strong>Sella Vineria</strong> et <strong>Rewine</strong> dans la vieille ville offrent des dégustations de cépages autochtones — Vidiano, Kotsifali, Mandilari.
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1648228891576-09bf0ba4aa96?w=600&q=80" alt="Bouteille et verre de vin crétois" loading="lazy"><br>
+          <strong>Cooking class</strong> — <strong>Androniki's Cretan House</strong> propose des cours de cuisine crétoise traditionnelle dans un village des collines. Marché le matin, cuisine l'après-midi, festin le soir. Réserver à l'avance.
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=600&q=80" alt="Préparation de légumes frais en cours de cuisine" loading="lazy"><br>
           <strong>Raki & mezze</strong> — En fin de soirée, les tavernes offrent le raki maison avec mezze gratuit (fruits, gâteaux). C'est la tradition crétoise du <em>tsikoudia</em> — ne jamais refuser, c'est l'hospitalité incarnée.
+          <img class="foodie-item-img" src="https://images.unsplash.com/photo-1746203170430-e8a7c11d5539?w=600&q=80" alt="Table garnie de mezze et raki crétois" loading="lazy">
         </div>
       </div>
 
@@ -1682,19 +1769,23 @@
           <strong>Preveli + monastère</strong> — Combiner la plage de Preveli avec la visite du monastère de Preveli en hauteur. Vue sur la palmeraie depuis le monastère, puis descente à la plage. Journée complète inoubliable.
           <div style="margin-top:6px">
             <a href="https://maps.google.com/maps?q=Preveli+Monastery+Crete" target="_blank" class="link-pill">Monastère ↗</a>
-          </div><br>
+          </div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1661285462650-78ad06b5c316?w=600&q=80" alt="Monastère de Preveli surplombant la palmeraie" loading="lazy"><br>
           <strong>Minaret + clocher</strong> — Dans la vieille ville, un minaret ottoman et un clocher vénitien se dressent côte à côte — symbole parfait de la Crète multiculturelle. Chercher la Neratze Mosque reconvertie en conservatoire.
           <div style="margin-top:6px">
             <a href="https://maps.google.com/maps?q=Neratze+Mosque+Rethymno" target="_blank" class="link-pill">Google Maps</a>
-          </div><br>
+          </div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1629290439638-bca633156414?w=600&q=80" alt="Architecture ottomane et vénitienne dans la vieille ville" loading="lazy"><br>
           <strong>Fortezza au coucher du soleil</strong> — Monter à la Fortezza vers 18h30 en octobre. La lumière dorée sur les pierres vénitiennes avec la mer en arrière-plan — moment magique, presque personne à cette heure.
           <div style="margin-top:6px">
             <a href="https://maps.google.com/maps?q=Fortezza+Rethymno" target="_blank" class="link-pill">Google Maps</a>
-          </div><br>
+          </div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1775649133969-62428745962a?w=600&q=80" alt="Rayons de soleil sur la ville côtière de Rethymno" loading="lazy"><br>
           <strong>Plage de Korakas au matin</strong> — Y aller à 8h avant les randonneurs. Crique totalement déserte, eau calme, lumière parfaite. Le sentier côtier depuis Plakias longe des falaises spectaculaires.
           <div style="margin-top:6px">
             <a href="https://maps.google.com/maps?q=Korakas+Beach+Plakias" target="_blank" class="link-pill">Google Maps</a>
           </div>
+          <img class="gem-item-img" src="https://images.unsplash.com/photo-1629369382900-1e534cdf14cd?w=600&q=80" alt="Crique isolée aux eaux turquoise — Korakas" loading="lazy">
         </div>
       </div>
     </div>
